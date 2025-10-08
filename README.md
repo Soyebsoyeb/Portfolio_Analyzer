@@ -33,7 +33,6 @@ Date,StockA,StockB,StockC
 2025-01-03,101,201,51
 
 
-
 - Each column after `Date` represents a stock’s historical price.  
 - Parsed using `ifstream` and `stringstream`.
 
@@ -43,9 +42,9 @@ Date,StockA,StockB,StockC
 
 For stock \(i\), the **logarithmic return** \(R_t\) is:
 
-\[
+$$
 R_t = \ln \frac{S_t}{S_{t-1}}
-\]
+$$
 
 - \(S_t\) = stock price at time \(t\)  
 - Log returns are **time-additive** and handle compounding better than simple returns.
@@ -56,15 +55,15 @@ R_t = \ln \frac{S_t}{S_{t-1}}
 
 - **Mean (Expected Return):**
 
-\[
+$$
 \mu_i = \frac{1}{n} \sum_{t=1}^{n} R_{i,t}
-\]
+$$
 
 - **Variance (Risk of Stock):**
 
-\[
+$$
 \sigma_i^2 = \frac{1}{n-1} \sum_{t=1}^{n} (R_{i,t} - \mu_i)^2
-\]
+$$
 
 - Variance measures the **volatility** of the stock.
 
@@ -72,9 +71,9 @@ R_t = \ln \frac{S_t}{S_{t-1}}
 
 ### 4️⃣ Calculating Covariance Between Stocks
 
-\[
+$$
 \text{Cov}(R_i, R_j) = \frac{1}{n-1} \sum_{t=1}^{n} (R_{i,t}-\mu_i)(R_{j,t}-\mu_j)
-\]
+$$
 
 - Covariance measures how two stocks **move together**:
   - **Positive covariance** → move in the same direction  
@@ -88,27 +87,27 @@ R_t = \ln \frac{S_t}{S_{t-1}}
 
 - Portfolio weights are **equally distributed** by default:
 
-\[
+$$
 w_i = \frac{1}{n}, \quad \text{for each stock } i
-\]
+$$
 
 - **Expected Portfolio Return:**
 
-\[
+$$
 R_p = \sum_{i=1}^{n} w_i \mu_i
-\]
+$$
 
 - **Portfolio Variance:**
 
-\[
+$$
 \sigma_p^2 = \sum_{i=1}^{n} \sum_{j=1}^{n} w_i w_j \text{Cov}(R_i, R_j)
-\]
+$$
 
 - **Portfolio Standard Deviation (Risk):**
 
-\[
+$$
 \sigma_p = \sqrt{\sigma_p^2}
-\]
+$$
 
 > Accounts for both individual stock volatility and how stocks move together.
 
@@ -140,6 +139,7 @@ Portfolio Risk (Variance): 0.00013
 Portfolio Risk (Std Dev): 0.0114
 
 
+
 ---
 
 ### 7️⃣ Key Concepts Used
@@ -153,9 +153,6 @@ Portfolio Risk (Std Dev): 0.0114
 ---
 
 
-
-
-<img width="596" height="880" alt="Screenshot 2025-10-08 181640" src="https://github.com/user-attachments/assets/e0a03029-903b-4f6e-a800-5a9fa4df313f" />
+<img width="596" height="880" alt="Screenshot 2025-10-08 181640" src="https://github.com/user-attachments/assets/e0a03029-903b-4f6e-a800-5a9fa4df313f" /> 
 <img width="592" height="728" alt="Screenshot 2025-10-08 181623" src="https://github.com/user-attachments/assets/5cd18bd4-4080-40ca-b6f8-79f7f327be3d" />
-
 
