@@ -152,14 +152,6 @@ Portfolio Risk (Std Dev): 0.0114
 
 ---
 
-### 8️⃣ Usage
-
-1. Place historical stock prices in `stock_prices.csv`  
-2. Compile the program:
-
-```bash
-g++ -o portfolio_analyzer portfolio_analyzer.cpp -std=c++11 -O2
-
 
 
 
